@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty_err">Field is empty</string>
+    <string name="spacing_err">Spacing not allowed</string>
+
+</resources>

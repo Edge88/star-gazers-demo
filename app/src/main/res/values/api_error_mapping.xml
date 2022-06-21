@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_connection">Cannot reach the server; check your connection</string>
+    <string name="not_found">Repository not found!</string>
+    <string name="limit_exceeded">Unauthorized or free API limit exceeded</string>
+
+
+</resources>

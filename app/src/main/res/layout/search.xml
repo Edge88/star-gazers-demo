@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.ldm.stargazer.ui.search.SearchViewModel"/>
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_name"
+            style="@style/StarGazers.TextInputLayout"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:errorEnabled="true"
+            app:layout_constraintBottom_toTopOf="@+id/tl_repo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:textError="@{viewmodel.ownerError}">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="@string/name_hint"
+                android:maxLength="25"
+                android:padding="8dp"
+                android:text="@={viewmodel.owner}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_repo"
+            style="@style/StarGazers.TextInputLayout"
+            android:layout_width="230dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="32dp"
+            app:errorEnabled="true"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:textError="@{viewmodel.repoError}">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_repo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="@string/repo_hint"
+                android:maxLength="25"
+                android:padding="8dp"
+                android:text="@={viewmodel.repo}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_button_text"
+        android:onClick="@{()->viewmodel.search()}"
+        android:enabled="@{viewmodel.buttonEnabled}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59000003"
+        tools:text="@string/search_button_text" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

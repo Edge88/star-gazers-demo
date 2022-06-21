@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/searchFragment">
+
+
+    <fragment
+        android:id="@+id/starGazersFragment"
+        android:name="com.ldm.stargazer.ui.stargazers.StarGazersFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/star_gazers">
+        <argument
+            android:name="QueryData"
+            app:argType="com.ldm.stargazer.data.repositories.parceable.SearchData" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.ldm.stargazer.ui.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/search">
+        <action
+            android:id="@+id/action_searchFragment_to_starGazersFragment"
+            app:destination="@id/starGazersFragment" />
+    </fragment>
+</navigation>

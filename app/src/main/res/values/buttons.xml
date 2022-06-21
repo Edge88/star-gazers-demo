@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_button_text">Search!</string>
+    <string name="return_home_button_text">Return Home</string>
+    <string name="return_retry_text">Retry</string>
+
+    <string name="name_hint">Owner</string>
+    <string name="repo_hint">Repository</string>
+
+    <style name="StarGazers.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!-- reference our hint & error styles -->
+        <item name="errorTextColor">@color/red</item>
+        <item name="hintTextColor">@color/grey</item>
+        <item name="boxStrokeColor">@color/buttons_stroke</item>
+    </style>
+
+</resources>
